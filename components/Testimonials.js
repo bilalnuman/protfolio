@@ -10,7 +10,7 @@ export default function Testimonials() {
         {items.map((t,i)=>(
           <blockquote key={i} className="card">
             <p className="italic text-slate-300">“{t.quote}”</p>
-            <p className="mt-3 text-slate-400">— {t.name}, {t.role}</p>
+            <p className="mt-3 text-slate-400">{t.name}, {t.role}</p>
           </blockquote>
         ))}
       </div>
