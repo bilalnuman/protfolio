@@ -60,9 +60,6 @@ export default function Contact() {
           <p className="text-red-400 mt-3">❌ Something went wrong. Please try again.</p>
         )}
 
-        <p className="text-sm text-slate-400 mt-3">
-          Tip: add <code>localhost:3000</code> and your Vercel domain in Formspree settings → Domains.
-        </p>
       </div>
     </section>
   );
