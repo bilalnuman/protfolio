@@ -1,8 +1,8 @@
 export default function Skills() {
   const groups = [
-    { title: "Frontend", items: ["React","Next.js","TypeScript","Tailwind","Redux"] },
-    { title: "Backend", items: ["Node.js","Express","REST","GraphQL","Microservices"] },
-    { title: "Data & Cloud", items: ["MongoDB","PostgreSQL","Prisma","Docker","AWS","Vercel"] }
+    { title: "Frontend", items: ["React","Next.js","Vue.js","Angular.js","TypeScript","Tailwind","MUI","HeroUi","Shadcn","Redux","Zustand","Formik","ElectronJS"] },
+    { title: "Backend", items: ["Node.js","Express","Nest.js","REST","GraphQL","Microservices"] },
+    { title: "Data & Cloud", items: ["MongoDB","PostgreSQL","Prisma","Docker","AWS","Vercel","Shared Hosting","CI/CD","Serverless Functions"] }
   ];
   return (
     <section id="skills" className="container py-12">
