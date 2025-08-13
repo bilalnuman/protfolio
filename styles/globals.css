@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1020;
+  --card: #0f172a;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #22d3ee;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,0.12), transparent),
+              radial-gradient(800px 400px at -20% 10%, rgba(59,130,246,0.12), transparent),
+              var(--bg);
+  color: var(--text);
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold mb-6;
+}
+.card {
+  @apply bg-slate-900/50 border border-slate-800 rounded-2xl p-6 shadow-lg;
+}
+.badge {
+  @apply inline-block rounded-full px-3 py-1 text-sm border border-slate-700 mr-2 mb-2;
+}
+.btn {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-700 hover:bg-slate-800 transition;
+}
+.link {
+  @apply underline decoration-dotted underline-offset-4 hover:text-cyan-300;
+}
