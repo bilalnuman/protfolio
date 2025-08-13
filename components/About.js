@@ -1,16 +1,14 @@
 export default function About() {
+  const skills = ["React","Next.js","Node.js","Express","TypeScript","MongoDB","PostgreSQL","Tailwind","Redux","Jest","Docker","Vercel"];
   return (
     <section id="about" className="container py-12">
       <h2 className="section-title">About</h2>
-      <div className="card">
+      <div className="card mt-6">
         <p className="text-slate-300 leading-relaxed">
-          MERN developer with 3+ years of experience in software houses, building SaaS dashboards,
-          e‑commerce, and real‑time apps. Strong focus on performance, clean architecture, and DX.
+          Full‑stack developer with 4+ years delivering high‑impact web apps for e‑commerce and SaaS.
+          Focus on performance, accessibility, and clean architectures that scale.
         </p>
-        <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4 text-sm text-slate-300">
-          <li className="badge">React</li><li className="badge">Next.js</li><li className="badge">Node.js</li><li className="badge">Express</li>
-          <li className="badge">MongoDB</li><li className="badge">TailwindCSS</li><li className="badge">Redux</li><li className="badge">AWS</li>
-        </ul>
+        <div className="mt-4 flex flex-wrap">{skills.map((s,i)=>(<span key={i} className="badge">{s}</span>))}</div>
       </div>
     </section>
   );

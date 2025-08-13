@@ -1,12 +1,19 @@
 export default function Skills() {
-  const skills = ["React", "Next.js", "Redux", "Node.js", "Express", "MongoDB", "TypeScript", "TailwindCSS", "Jest", "Docker", "AWS", "Vercel"];
+  const groups = [
+    { title: "Frontend", items: ["React","Next.js","TypeScript","Tailwind","Redux"] },
+    { title: "Backend", items: ["Node.js","Express","REST","GraphQL","Microservices"] },
+    { title: "Data & Cloud", items: ["MongoDB","PostgreSQL","Prisma","Docker","AWS","Vercel"] }
+  ];
   return (
     <section id="skills" className="container py-12">
       <h2 className="section-title">Skills</h2>
-      <div className="card">
-        <div className="flex flex-wrap">
-          {skills.map((s, i) => <span key={i} className="badge">{s}</span>)}
-        </div>
+      <div className="grid md:grid-cols-3 gap-6 mt-6">
+        {groups.map((g,i)=>(
+          <div key={i} className="card">
+            <h3 className="font-semibold mb-2">{g.title}</h3>
+            <div className="flex flex-wrap">{g.items.map((s,j)=>(<span key={j} className="badge">{s}</span>))}</div>
+          </div>
+        ))}
       </div>
     </section>
   );

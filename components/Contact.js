@@ -1,65 +1,34 @@
-import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
-  const [status, setStatus] = useState("idle"); // idle | submitting | success | error
+  const [state, handleSubmit] = useForm("https://formspree.io/f/mnnzrawp"); // replace with your ID
+  const [show, setShow] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("submitting");
-
-    const form = e.target;
-    const data = new FormData(form);
-
-    const res = await fetch("https://formspree.io/f/mnnzrawp", {
-      method: "POST",
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (res.ok) {
-      form.reset(); // clear inputs
-      setStatus("success");
-    } else {
-      setStatus("error");
+  useEffect(() => {
+    if (state.succeeded) {
+      setShow(true);
+      const t = setTimeout(()=> setShow(false), 4000);
+      return () => clearTimeout(t);
     }
-  };
+  }, [state.succeeded]);
 
   return (
     <section id="contact" className="container py-12">
       <h2 className="section-title">Contact</h2>
-      <div className="card">
+      <div className="card mt-6">
         <form onSubmit={handleSubmit} className="grid gap-4">
-          <input className="card !p-3" name="name" placeholder="Your name" required />
-          <input className="card !p-3" name="email" type="email" placeholder="Email" required />
-          <textarea className="card !p-3" name="message" rows="4" placeholder="Your message" required />
-
+          <input className="card !p-3" id="name" name="name" placeholder="Your name" required />
+          <input className="card !p-3" id="email" name="email" type="email" placeholder="Email" required />
+          <textarea className="card !p-3" id="message" name="message" rows="4" placeholder="Your message" required />
           <input type="hidden" name="_subject" value="New message from portfolio" />
-          <input
-            type="text"
-            name="_honeypot"
-            tabIndex="-1"
-            autoComplete="off"
-            className="hidden"
-          />
-
-          <button
-            className="btn justify-center"
-            type="submit"
-            disabled={status === "submitting"}
-          >
-            {status === "submitting" ? "Sending..." : "Send Message"}
+          <button className="btn justify-center" type="submit" disabled={state.submitting}>
+            {state.submitting ? "Sending..." : "Send Message"}
           </button>
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+          <ValidationError prefix="Message" field="message" errors={state.errors} />
         </form>
-
-        {status === "success" && (
-          <p className="text-green-400 mt-3">✅ Thanks! Your message has been sent.</p>
-        )}
-        {status === "error" && (
-          <p className="text-red-400 mt-3">❌ Something went wrong. Please try again.</p>
-        )}
-
+        {show && (<p className="text-green-400 mt-3">✅ Thanks! Your message has been sent.</p>)}
       </div>
     </section>
   );
