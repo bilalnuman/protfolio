@@ -1,8 +1,8 @@
 const data = [
-  { title: "WorkTrack — Workforce Management", desc: "Time tracking, tasks, attendance & reporting for distributed teams.", stack: ["Next.js","Node.js","MongoDB","JWT"], link: "#" },
-  { title: "QuickMart — Multi‑Vendor E‑commerce", desc: "Marketplace with Stripe/PayPal, vendor dashboards, order management.", stack: ["React","Express","MongoDB","Tailwind"], link: "#" },
-  { title: "MedLink — Telemedicine", desc: "Appointments, WebRTC video, chat, and encrypted uploads.", stack: ["React","Socket.IO","Node.js","Cloudinary"], link: "#" },
-  { title: "Insightlytics — SaaS Analytics", desc: "SEO‑friendly dashboards with SSR/ISR; role‑based access.", stack: ["Next.js","TypeScript","PostgreSQL","Prisma"], link: "#" }
+  { title: "Mental Edge (AI Coaching Platform)", desc: " Created a scalable AI coaching web app offering personalized content and payments. Implemented with React.js, AWS Amplify, and Stripe.", stack: ["Next.js","Tailwind CSS","Django","MongoDB","JWT"], link: "https://portal.mentaledge.ai" },
+  { title: "Gnizzel (Dental Appointment System)", desc: "Web-based appointment system for dental clinics, enabling seamless booking and schedule management. Powered by Next.js and AWS.", stack: ["React","Express","MongoDB","AntDesign"], link: "https://www.gnizzel.com/" },
+  { title: "Watchlytics (E-commerce for Watches)", desc: "Developed a modern e-commerce site for luxury watches with fast product search, filtering, and checkout. Optimized with React and TypeScript", stack: ["Next.js","Tailwind CSS","Django","Stripe"], link: "https://staging.watchlytics.io/dashboard" },
+  { title: "Camp Genie", desc: "Built Camp Genie, an online system to manage kids’ summer camp enrollments. Designed with scalability and ease of use in mind.", stack: ["Next.js","TypeScript","Supabase","Tailwind CSS"], link: "https://develop.thisiscampgenie.com/" }
 ];
 export default function Projects() {
   return (

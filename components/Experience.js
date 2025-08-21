@@ -1,9 +1,9 @@
 export default function Experience() {
   const items = [
-    { role: "Senior Full‑Stack Developer", company: "Software House — Karachi", period: "Jun 2023 – Present",
-      bullets: ["Led SEO‑optimized SaaS, +50% organic traffic.", "Node.js microservices & Next.js app routing; 40% faster deploys.", "Observability & CI/CD on Vercel/GitHub Actions."] },
-    { role: "Full‑Stack Developer", company: "Software House — Lahore", period: "Jan 2021 – May 2023",
-      bullets: ["E‑commerce modules with SSR/ISR (Next.js).", "Analytics via MongoDB aggregations.", "Agile delivery with Jira & Scrum."] }
+    { role: "Senior Frontend Developer", company: "Zweidevs Pvt. Ltd. — Lahore", period: "Feb 2025 – Present",
+      bullets: ["Built and optimized UIs with React.js, TypeScript, Tailwind CSS.", "Eveloped reusable component library improving dev efficiency by 30%.", "Integrated backend APIs for real-time data sync and smooth workflows.","Mentored junior developers and led UI code reviews."] },
+    { role: "Frontend Developer", company: "BitCloud Solutions — Lahore", period: "April 2023 – Sep 2024",
+      bullets: ["Built responsive interfaces with Next.js, improving load times by 40%.", "Implemented lazy loading & code splitting for performance optimization.", "Collaborated with design/QA teams ensuring accessibility compliance.","Enhanced user experience through modern UI patterns."] }
   ];
   return (
     <section id="experience" className="container py-12">

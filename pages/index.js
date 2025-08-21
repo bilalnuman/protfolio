@@ -28,7 +28,7 @@ export default function Home() {
           "name":"Muhammad Bilal",
           "url":"https://your-portfolio.vercel.app",
           "sameAs":["https://www.linkedin.com/in/muhammad-bilal-eng/","https://github.com/yourusername"],
-          "jobTitle":"Senior Full-Stack Developer"
+          "jobTitle":"Senior Frontend Developer"
         }) }}
       />
     </main>
