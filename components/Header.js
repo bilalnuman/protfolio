@@ -19,7 +19,7 @@ export default function Header() {
           {nav.map((i) => (
             <a key={i.href} href={i.href} className="hover:text-white">{i.label}</a>
           ))}
-          <a href="/resume.pdf" className="btn">Download CV</a>
+          <a href="/Muhammad Bilal.pdf" className="btn">Download CV</a>
         </div>
         <button className="md:hidden btn" aria-label="Menu" onClick={()=>setOpen(!open)}>
           {open ? <X size={18}/> : <Menu size={18}/>}
